@@ -72,23 +72,37 @@ public class Book implements Publication {
     //specific methods
     public String showdetails() {
         return "\nBook:" + "\n" + "Title = " + "'" + title + '\'' + "\n" + "Author = "
-                + author + "\n"  + "Reader = " + reader.getName() + "\n" + "Number of Pages = " + npages + "\n" + "Actual Page = "
-                + actualpage  + "\n" + "Open = " + open;};
+                + author + "\n"  + "Reader = " + reader.getName() + " with " + reader.getAge() + " years old" + "\n" + "Number of Pages = " + npages + "\n" + "Actual Page = "
+                + actualpage  + "\n" + "Open = " + (this.open ? "Yes" : "No") + "\n";};
 
     @Override
     public void open() {
-        this.setOpen(true);
+        if (this.open == true) {
+            System.out.println("Book already open");
+        } else {
+            System.out.println("Book opened");
+            this.open = true;
+        }
     }
 
     @Override
     public void close() {
-        this.setOpen(false);
+        if (this.open == true) {
+            System.out.println("Book closed");
+            this.setOpen(false);
+            this.setActualpage(0);
+        } else {
+            System.out.println("Book already closed");
+        }
     }
 
     @Override
     public void leafthrough(int p) {
-        this.setOpen(false);
-        this.actualpage = p;
+        if (this.open == true) {
+            System.out.println("Page " + actualpage + " opened");
+        } else {
+            System.out.println("Book is closed, can't leafthrough");
+        }
     }
 
     @Override
