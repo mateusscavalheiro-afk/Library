@@ -4,7 +4,7 @@ package Last_Code_of_CentroWeg_2025_Library;
 public interface Publication {
     public void open();
     public void close();
-    public void leafthrough();
+    public void leafthrough(int p);
     public void nexpage();
     public void previouspage();
 }

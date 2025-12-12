@@ -7,25 +7,14 @@ public class Book implements Publication {
     private boolean open;
 
 
-    //specific methods
-    public String showdetails() {
-        return "Book{" +
-                "title='" + title + '\'' +
-                ", autor='" + autor + '\'' +
-                ", reader='" + reader + '\'' +
-                ", npages=" + npages +
-                ", actualpage=" + actualpage +
-                ", open=" + open +
-                '}';
-    }
-
-
     //constructor method
-    public Book(String title, String autor, int npages, String reader) {
+    public Book(String title, String autor, int npages, String reader, int actualpage, boolean open) {
         this.title = title;
         this.autor = autor;
         this.npages = npages;
         this.reader = reader;
+        this.actualpage = 0;
+        this.open = false;
     }
 
 
@@ -80,28 +69,40 @@ public class Book implements Publication {
 
 
     //specific methods
+    public String showdetails() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", autor='" + autor + '\'' +
+                ", reader='" + reader + '\'' +
+                ", npages=" + npages +
+                ", actualpage=" + actualpage +
+                ", open=" + open +
+                '}';
+    }
+
     @Override
     public void open() {
-
+        this.setOpen(true);
     }
 
     @Override
     public void close() {
-
+        this.setOpen(false);
     }
 
     @Override
-    public void leafthrough() {
-
+    public void leafthrough(int p) {
+        this.setOpen(false);
+        this.actualpage = p;
     }
 
     @Override
     public void nexpage() {
-
+        this.actualpage++;
     }
 
     @Override
     public void previouspage() {
-
+        this.actualpage--;
     }
 }
