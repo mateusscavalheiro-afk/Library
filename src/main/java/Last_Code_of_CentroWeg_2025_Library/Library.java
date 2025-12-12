@@ -9,9 +9,9 @@ public class Library {
         r[0] = new Reader (38, "Marcia", "Female");
         r[1] = new Reader (199, "Juanito", "Male");
 
-        b[0] = new Book ("Harry Potter and The Philosopher's Stone", "J.K Rowling", 230, r[1].getName());
-        b[1] = new Book ("The Odissey", "Romero", 450, r[0].getName());
-        b[2] = new Book ("Republic", "Plato", 500, r[1].getName());
+        b[0] = new Book ("Harry Potter and The Philosopher's Stone", "J.K Rowling", 230, r[1]);
+        b[1] = new Book ("The Odissey", "Romero", 450, r[0]);
+        b[2] = new Book ("Republic", "Plato", 500, r[1]);
 
         System.out.println(b[0].showdetails());
         System.out.println(b[1].showdetails());
