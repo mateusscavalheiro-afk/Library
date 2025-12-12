@@ -8,11 +8,11 @@ public class Book implements Publication {
 
 
     //constructor method
-    public Book(String title, String author, int npages, Reader reader) {
+    public Book(String title, String author, int npages, String reader) {
         this.setTitle(title);
         this.setAuthor(author);
         this.setNpages(npages);
-        this.setReader(String.valueOf(reader));
+        this.setReader(reader);
         this.setActualpage(0);
         this.setOpen(false);
     }
@@ -70,15 +70,9 @@ public class Book implements Publication {
 
     //specific methods
     public String showdetails() {
-        return "Book{" +
-                "title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", reader='" + reader + '\'' +
-                ", npages=" + npages +
-                ", actualpage=" + actualpage +
-                ", open=" + open +
-                '}';
-    }
+        return "\nBook:" + "\n" + "Title = " + "'" + title + '\'' + "\n" + "Author = "
+                + "'" + author + '\'' + "\n"  + "Reader = " + "'" + reader + '\'' + "\n" + "Number of Pages = " + "'" + npages + '\'' + "\n" + "Actual Page = "
+                + "'" + actualpage + '\'' + "\n" + "Open = " + "'" + open;};
 
     @Override
     public void open() {
