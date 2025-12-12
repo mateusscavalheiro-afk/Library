@@ -13,6 +13,8 @@ public class Library {
         b[1] = new Book ("The Odissey", "Romero", 450, r[0]);
         b[2] = new Book ("Republic", "Plato", 500, r[1]);
 
-
+        System.out.println(b[0].showdetails());
+        System.out.println(b[1].showdetails());
+        System.out.println(b[2].showdetails());
     }
 }
