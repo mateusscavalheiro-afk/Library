@@ -2,19 +2,19 @@ package Last_Code_of_CentroWeg_2025_Library;
 @SuppressWarnings("all")
 
 public class Book implements Publication {
-    private String title, autor, reader;
+    private String title, author, reader;
     private int npages, actualpage;
     private boolean open;
 
 
     //constructor method
-    public Book(String title, String autor, int npages, String reader, int actualpage, boolean open) {
-        this.title = title;
-        this.autor = autor;
-        this.npages = npages;
-        this.reader = reader;
-        this.actualpage = 0;
-        this.open = false;
+    public Book(String title, String author, int npages, Reader reader) {
+        this.setTitle(title);
+        this.setAuthor(author);
+        this.setNpages(npages);
+        this.setReader(String.valueOf(reader));
+        this.setActualpage(0);
+        this.setOpen(false);
     }
 
 
@@ -27,12 +27,12 @@ public class Book implements Publication {
         this.title = title;
     }
 
-    public String getAutor() {
-        return autor;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public void setAuthor(String autor) {
+        this.author = autor;
     }
 
     public String getReader() {
@@ -72,7 +72,7 @@ public class Book implements Publication {
     public String showdetails() {
         return "Book{" +
                 "title='" + title + '\'' +
-                ", autor='" + autor + '\'' +
+                ", author='" + author + '\'' +
                 ", reader='" + reader + '\'' +
                 ", npages=" + npages +
                 ", actualpage=" + actualpage +
