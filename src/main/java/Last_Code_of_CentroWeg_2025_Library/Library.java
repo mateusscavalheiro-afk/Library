@@ -13,14 +13,12 @@ public class Library {
         b[1] = new Book ("The Odissey", "Romero", 450, r[0]);
         b[2] = new Book ("Republic", "Plato", 500, r[1]);
 
+        System.out.println(b[0].showdetails());
         b[0].open();
+        b[0].leafthrough(80);
         b[0].open();
-        b[0].close();
-        b[0].close();
-        b[0].leafthrough(1);
-        b[0].open();
-        b[0].leafthrough(1);
-        b[0].leafthrough(34);
-
+        b[0].previouspage();
+        b[0].leafthrough(-60);
+        System.out.println(b[0].showdetails());
     }
 }

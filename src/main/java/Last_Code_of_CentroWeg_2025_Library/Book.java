@@ -103,13 +103,13 @@ public class Book implements Publication {
 
             if (targetPage > this.npages) {
                 this.actualpage = this.npages;
-                System.out.println("You reached the end of the book (Page " + this.npages + ")");
+                System.out.println("You reached the end of the book (Page " + this.getNpages() + ")");
             } else if (targetPage < 0) {
                 this.actualpage = 0;
                 System.out.println("You went back to the beginning (Page 0)");
             } else {
                 this.actualpage = targetPage;
-                System.out.println("Leafed through to page: " + this.actualpage);
+                System.out.println("Leafed through to page: " + this.getActualpage());
             }
         } else {
             System.out.println("The book is closed, you cannot leaf through it.");
@@ -121,7 +121,7 @@ public class Book implements Publication {
         if (this.isOpen()) {
             if (this.actualpage < this.npages) {
                 this.actualpage++;
-                System.out.println("Next page: " + this.actualpage);
+                System.out.println("Next page: " + this.getActualpage());
             } else {
                 System.out.println("Error: You are already on the last page.");
             }
@@ -135,7 +135,7 @@ public class Book implements Publication {
         if (this.isOpen()) {
             if (this.actualpage > 0) {
                 this.actualpage--;
-                System.out.println("Previous page: " + this.actualpage);
+                System.out.println("Previous page: " + this.getActualpage());
             } else {
                 System.out.println("Error: You are already on the first page.");
             }
