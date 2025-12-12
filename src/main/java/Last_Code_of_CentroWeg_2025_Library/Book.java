@@ -99,14 +99,13 @@ public class Book implements Publication {
     @Override
     public void leafthrough(int p) {
         if (this.isOpen()) {
-            // Calcula a nova página somando o salto (p) à página atual
             int targetPage = this.actualpage + p;
 
             if (targetPage > this.npages) {
-                this.actualpage = this.npages; // Trava na última página
+                this.actualpage = this.npages;
                 System.out.println("You reached the end of the book (Page " + this.npages + ")");
             } else if (targetPage < 0) {
-                this.actualpage = 0; // Trava na primeira página
+                this.actualpage = 0;
                 System.out.println("You went back to the beginning (Page 0)");
             } else {
                 this.actualpage = targetPage;
