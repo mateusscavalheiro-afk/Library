@@ -98,20 +98,50 @@ public class Book implements Publication {
 
     @Override
     public void leafthrough(int p) {
-        if (this.open == true) {
-            System.out.println("Page " + actualpage + " opened");
+        if (this.isOpen()) {
+            // Calcula a nova página somando o salto (p) à página atual
+            int targetPage = this.actualpage + p;
+
+            if (targetPage > this.npages) {
+                this.actualpage = this.npages; // Trava na última página
+                System.out.println("You reached the end of the book (Page " + this.npages + ")");
+            } else if (targetPage < 0) {
+                this.actualpage = 0; // Trava na primeira página
+                System.out.println("You went back to the beginning (Page 0)");
+            } else {
+                this.actualpage = targetPage;
+                System.out.println("Leafed through to page: " + this.actualpage);
+            }
         } else {
-            System.out.println("Book is closed, can't leafthrough");
+            System.out.println("The book is closed, you cannot leaf through it.");
         }
     }
 
     @Override
     public void nexpage() {
-        this.actualpage++;
+        if (this.isOpen()) {
+            if (this.actualpage < this.npages) {
+                this.actualpage++;
+                System.out.println("Next page: " + this.actualpage);
+            } else {
+                System.out.println("Error: You are already on the last page.");
+            }
+        } else {
+            System.out.println("The book is closed.");
+        }
     }
 
     @Override
     public void previouspage() {
-        this.actualpage--;
+        if (this.isOpen()) {
+            if (this.actualpage > 0) {
+                this.actualpage--;
+                System.out.println("Previous page: " + this.actualpage);
+            } else {
+                System.out.println("Error: You are already on the first page.");
+            }
+        } else {
+            System.out.println("The book is closed.");
+        }
     }
 }
