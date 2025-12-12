@@ -1,7 +1,7 @@
 package Last_Code_of_CentroWeg_2025_Library;
 @SuppressWarnings("all")
 
-public class Book {
+public abstract class Book {
     private String title, autor, reader;
     private int npages, actualpage;
     private boolean open;
