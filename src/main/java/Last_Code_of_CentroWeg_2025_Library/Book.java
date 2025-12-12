@@ -1,7 +1,7 @@
 package Last_Code_of_CentroWeg_2025_Library;
 @SuppressWarnings("all")
 
-public abstract class Book {
+public class Book implements Publication {
     private String title, autor, reader;
     private int npages, actualpage;
     private boolean open;
@@ -76,5 +76,32 @@ public abstract class Book {
 
     public void setOpen(boolean open) {
         this.open = open;
+    }
+
+
+    //specific methods
+    @Override
+    public void open() {
+
+    }
+
+    @Override
+    public void close() {
+
+    }
+
+    @Override
+    public void leafthrough() {
+
+    }
+
+    @Override
+    public void nexpage() {
+
+    }
+
+    @Override
+    public void previouspage() {
+
     }
 }
