@@ -12,8 +12,9 @@ Durante esta Unidade Curricular, consolidei minha percepção de que **Java** é
 
 ### Principais Evoluções:
 * **Domínio de POO:** Aprimorei o uso de herança, polimorfismo e encapsulamento para criar um sistema flexível.
-* **Organização Profissional:** Aprendi a importância de estruturar o projeto de forma modular, abandonando práticas amadoras (como o uso de scripts `.bat` para automação básica) em favor de ferramentas nativas e builds organizados.
+* **Organização Profissional:** Aprendi a importância de estruturar o projeto de forma modular, abandonando práticas amadoras em favor de ferramentas nativas e builds organizados.
 * **Segurança e Ética:** Entendi a necessidade crítica de conformidade com a **LGPD (Lei Geral de Proteção de Dados)**, garantindo que o sistema trate informações com privacidade, independentemente da sua complexidade.
+* **Bônus: DIGA NÃO AO ".BAT":** Aprendi que o uso de scripts ".bat" podem ser perigosas e por isso devem ser evitadas, mesmo durante momentos de descontração.
 
 ---
 
