@@ -6,7 +6,6 @@ public class Library {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-        // Setup inicial
         Reader r[] = new Reader[2];
         r[0] = new Reader(38, "Marcia", "Female");
         r[1] = new Reader(199, "Juanito", "Male");
@@ -16,7 +15,7 @@ public class Library {
         b[1] = new Book("The Odyssey", "Homer", 450, r[0]);
         b[2] = new Book("Republic", "Plato", 500, r[1]);
 
-        int bookIndex = 0; // Livro selecionado no momento (atalho 1)
+        int bookIndex = 0;
         int option = -1;
 
         System.out.println("--- Welcome to the Library System ---");
